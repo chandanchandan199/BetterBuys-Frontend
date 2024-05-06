@@ -5,7 +5,6 @@ import Loader from "../components/Loader";
 import Message from "../components/message";
 import { Link, useParams } from "react-router-dom";
 import ProductCarousel from "../components/ProductCarousel";
-import axios from "axios";
 const HomeScreen = () => {
   const { keyword } = useParams();
   const { data: products, isLoading, error } = useGetProductsQuery({ keyword });
@@ -41,14 +40,5 @@ const HomeScreen = () => {
     </>
   );
 };
-
-// const HomeScreen = () => {
-//   const getProducts = async () => {
-//     const response = await axios.get("/api/products");
-//     console.log(response.data);
-//   };
-//   getProducts();
-//   return <>Sweet pus in HomeScreen</>;
-// };
 
 export default HomeScreen;
